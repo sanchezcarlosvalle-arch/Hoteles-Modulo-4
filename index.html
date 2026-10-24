@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Carlos Osmany Sanchez Valle">
+  <title>Guía Hoteles - Módulo 4</title>
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="node_modules/open-iconic/font/css/open-iconic-bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <span class="oi oi-home mr-2 text-warning" aria-hidden="true"></span>
+        Guía Hoteles <span class="badge badge-warning text-dark ml-2 small">Módulo 4</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHoteles" aria-controls="navbarHoteles" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarHoteles">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#"><span class="oi oi-home mr-1"></span> Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#info"><span class="oi oi-code mr-1"></span> Estilos SASS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#hoteles"><span class="oi oi-browser mr-1"></span> Hoteles</a>
+          </li>
+        </ul>
+
+        <button type="button" id="btnAbrirModal" class="btn btn-primary" data-toggle="modal" data-target="#reservaModal">
+          <span class="oi oi-account-login mr-1"></span> Abrir Modal de Reserva
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <header class="head">
+    <div class="container">
+      <h1>Hoteles</h1>
+    </div>
+  </header>
+
+  <main class="container my-4">
+
+    <div id="alertContainer" class="mt-2"></div>
+
+    <section id="info" class="row mb-4">
+      <div class="col-12 col-md-4">
+        <div class="alerta-verde h-100">
+          <h3 class="h5 font-weight-bold"><span class="oi oi-check mr-1"></span> ¿Cómo funciona?</h3>
+          <p class="mb-0">Buscá los hoteles de acuerdo a tu preferencia.</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="alerta-amarilla h-100">
+          <h3 class="h5 font-weight-bold"><span class="oi oi-warning mr-1"></span> ¿Dónde puedo reservar?</h3>
+          <p class="mb-0">Elegí la ciudad que te interese y luego realizá la reserva con tus datos.</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="alerta-roja h-100">
+          <h3 class="h5 font-weight-bold"><span class="oi oi-x mr-1"></span> ¿Cómo pago?</h3>
+          <p class="mb-0">Utilizá tu tarjeta favorita.</p>
+        </div>
+      </div>
+    </section>
+
+    <hr>
+
+    <h2 id="hoteles" class="h4 font-weight-bold my-4"><span class="oi oi-grid-three-up mr-2 text-primary"></span> Hoteles</h2>
+
+    <section class="row">
+      <div class="col-12 col-sm-6 col-lg-3 mb-4">
+        <div class="card h-100">
+          <img src="https://picsum.photos/seed/hotel-rio/400/220" class="card-img-top" alt="Hotel Rio de Janeiro">
+          <div class="card-body">
+            <h4 class="card-title h5 font-weight-bold">Hotel Rio de Janeiro</h4>
+            <p class="card-text text-muted">Hotel ubicado en pleno centro de Rio de Janeiro a pocos metros de la playa.</p>
+          </div>
+          <div class="card-footer">
+            <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#reservaModal">Reservar</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-lg-3 mb-4">
+        <div class="card h-100">
+          <img src="https://picsum.photos/seed/hotel-lima/400/220" class="card-img-top" alt="Hotel Lima">
+          <div class="card-body">
+            <h4 class="card-title h5 font-weight-bold">Hotel Lima</h4>
+            <p class="card-text text-muted">Hotel ubicado en pleno centro.</p>
+          </div>
+          <div class="card-footer">
+            <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#reservaModal">Reservar</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-lg-3 mb-4">
+        <div class="card h-100">
+          <img src="https://picsum.photos/seed/hotel-buenosaires/400/220" class="card-img-top" alt="Hotel Buenos Aires">
+          <div class="card-body">
+            <h4 class="card-title h5 font-weight-bold">Hotel Buenos Aires</h4>
+            <p class="card-text text-muted">Hotel ubicado en pleno centro.</p>
+          </div>
+          <div class="card-footer">
+            <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#reservaModal">Reservar</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-lg-3 mb-4">
+        <div class="card h-100">
+          <img src="https://picsum.photos/seed/hotel-barcelona/400/220" class="card-img-top" alt="Hotel Barcelona">
+          <div class="card-body">
+            <h4 class="card-title h5 font-weight-bold">Hotel Barcelona</h4>
+            <p class="card-text text-muted">Hotel ubicado en pleno centro de Barcelona a pocos metros de la playa.</p>
+          </div>
+          <div class="card-footer">
+            <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#reservaModal">Reservar</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="row">
+      <div class="col-12 col-md-4 mb-4">
+        <div class="card h-100">
+          <img src="https://picsum.photos/seed/hotel-sanpablo/400/220" class="card-img-top" alt="Hotel San Pablo">
+          <div class="card-body">
+            <h4 class="card-title h5 font-weight-bold">Hotel San Pablo</h4>
+            <p class="card-text text-muted">Hotel ubicado en pleno centro.</p>
+          </div>
+          <div class="card-footer">
+            <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#reservaModal">Reservar</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-4 mb-4">
+        <div class="card h-100">
+          <img src="https://picsum.photos/seed/hotel-madrid/400/220" class="card-img-top" alt="Hotel Madrid">
+          <div class="card-body">
+            <h4 class="card-title h5 font-weight-bold">Hotel Madrid</h4>
+            <p class="card-text text-muted">Hotel ubicado en pleno centro.</p>
+          </div>
+          <div class="card-footer">
+            <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#reservaModal">Reservar</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-md-4 mb-4">
+        <div class="card h-100">
+          <img src="https://picsum.photos/seed/hotel-lapaz/400/220" class="card-img-top" alt="Hotel La Paz">
+          <div class="card-body">
+            <h4 class="card-title h5 font-weight-bold">Hotel La Paz</h4>
+            <p class="card-text text-muted">Hotel ubicado en pleno centro.</p>
+          </div>
+          <div class="card-footer">
+            <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#reservaModal">Reservar</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="modal fade" id="reservaModal" tabindex="-1" role="dialog" aria-labelledby="reservaModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+
+        <div class="modal-header bg-dark text-white">
+          <h5 class="modal-title font-weight-bold" id="reservaModalLabel">
+            <span class="oi oi-person mr-2 text-info"></span> Reserva de Hotel
+          </h5>
+          <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+
+        <form id="formReservaModal">
+          <div class="modal-body">
+            <p class="text-muted small mb-3">Completá tus datos para reservar. Fijate en la consola de tu navegador cómo los 4 eventos del ciclo de vida del modal son registrados por el script.</p>
+
+            <div class="form-group">
+              <label for="modalNombre" class="font-weight-bold">Nombre Completo:</label>
+              <input type="text" class="form-control" id="modalNombre" placeholder="Tu nombre y apellido" required>
+            </div>
+
+            <div class="form-group">
+              <label for="modalEmail" class="font-weight-bold">Email de Contacto:</label>
+              <input type="email" class="form-control" id="modalEmail" placeholder="correo@ejemplo.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="modalHotel" class="font-weight-bold">Hotel:</label>
+              <select class="form-control" id="modalHotel">
+                <option value="Hotel Rio de Janeiro">Hotel Rio de Janeiro</option>
+                <option value="Hotel Lima">Hotel Lima</option>
+                <option value="Hotel Buenos Aires">Hotel Buenos Aires</option>
+                <option value="Hotel Barcelona">Hotel Barcelona</option>
+                <option value="Hotel San Pablo">Hotel San Pablo</option>
+                <option value="Hotel Madrid">Hotel Madrid</option>
+                <option value="Hotel La Paz">Hotel La Paz</option>
+              </select>
+            </div>
+
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" id="checkNotificaciones" checked>
+              <label class="form-check-label text-muted small" for="checkNotificaciones">
+                Deseo recibir actualizaciones sobre nuevos hoteles.
+              </label>
+            </div>
+
+            <p class="text-muted small mt-3 mb-0">Formulario desarrollado por Carlos Osmany Sanchez Valle - Módulo 4, Diseñando páginas web con Bootstrap 4.</p>
+          </div>
+
+          <div class="modal-footer bg-light">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            <button type="submit" class="btn btn-primary">
+              <span class="oi oi-circle-check mr-1"></span> Confirmar Reserva
+            </button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+  <footer class="foot py-4 mt-5">
+    <div class="container">
+      <div class="row align-items-center">
+
+        <div class="col-12 col-md-4 text-left mb-3 mb-md-0">
+          <p class="mb-1"><a href="https://facebook.com" target="_blank" rel="noopener"><span class="oi oi-globe mr-1"></span> Facebook</a></p>
+          <p class="mb-1"><a href="https://twitter.com" target="_blank" rel="noopener"><span class="oi oi-globe mr-1"></span> Twitter</a></p>
+          <p class="mb-1"><a href="https://instagram.com" target="_blank" rel="noopener"><span class="oi oi-camera-slr mr-1"></span> Instagram</a></p>
+          <p class="mb-0"><a href="https://plus.google.com" target="_blank" rel="noopener"><span class="oi oi-globe mr-1"></span> Google+</a></p>
+        </div>
+
+        <div class="col-12 col-md-4 text-center mb-3 mb-md-0">
+          <h5>Oficina central</h5>
+          <address class="mb-0">
+            Tucuman 834, CABA, Argentina<br>
+            <abbr title="Teléfono">Tel:</abbr> +549111234567<br>
+            <a href="mailto:contacto@guiahoteles.com">contacto@guiahoteles.com</a>
+          </address>
+        </div>
+
+        <div class="col-12 col-md-4 text-right">
+          <p class="mb-1">Nosotros</p>
+          <p class="mb-1">Precios</p>
+          <p class="mb-1">Términos y condiciones</p>
+          <p class="mb-2">Contacto</p>
+          <p class="mb-1">Autor: <strong>Carlos Osmany Sanchez Valle</strong></p>
+          <p class="mb-1"><small>Curso: <a href="https://www.coursera.org/learn/disenando-paginas-bootstrap4/home/welcome" target="_blank" rel="noopener">Diseñando páginas web con Bootstrap 4</a> (Coursera) - Módulo 4</small></p>
+          <small>&copy; 2026 Carlos Osmany Sanchez Valle. Todos los derechos reservados.</small>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+  <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
